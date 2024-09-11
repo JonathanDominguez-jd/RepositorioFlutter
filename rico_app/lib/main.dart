@@ -11,8 +11,9 @@ class MainApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return const MaterialApp(
       home: Scaffold(
+        backgroundColor: Colors.amber,
         body: Center(
-          child: Text('Hello World!'),
+          child: Text('JONATHAN JOSUE DOMINGUEZ GOMEZ'),
         ),
       ),
     );
