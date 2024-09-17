@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:rico_app/utils/colors.dart';
 
 void main() => runApp(const MyApp());
 
@@ -72,15 +73,13 @@ class TitleSection extends StatelessWidget {
                   child: Text(
                     name,
                     style: const TextStyle(
-                      fontWeight: FontWeight.bold,
-                    ),
+                        fontWeight: FontWeight.bold, fontFamily: "Actor"),
                   ),
                 ),
                 Text(
                   location,
-                  style: TextStyle(
-                    color: Colors.grey[500],
-                  ),
+                  style:
+                      TextStyle(color: Colors.grey[500], fontFamily: "Allerta"),
                 ),
               ],
             ),
@@ -99,7 +98,7 @@ class ButtonSection extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final Color color = Theme.of(context).primaryColor;
+    Color color = AppColors.warningColor;
     return SizedBox(
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -244,7 +243,7 @@ class _FavoriteWidgetState extends State<FavoriteWidget> {
             icon: (_isFavorited
                 ? const Icon(Icons.star)
                 : const Icon(Icons.star_border)),
-            color: Colors.red[500],
+            color: AppColors.primaryIconColor,
             onPressed: _toggleFavorite,
           ),
         ),
